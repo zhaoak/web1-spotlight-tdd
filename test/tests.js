@@ -96,3 +96,17 @@ test('returnAsAnArray test', (expect) => {
     const actual3 = returnAsAnArray(7, 8, 9);
     expect.deepEqual(actual3, expected3, '[7, 8, 9]');
 });
+
+test('makeLuckyGreeting Test', (expect) => {
+    const expected = 'Hello! Your lucky number today is 3';
+    const actual = makeLuckyGreeting(1, 2);
+    expect.equal(actual, expected, 'input 1 and 2');
+
+    const expected2 = 'Hello! Your lucky number today is -99';
+    const actual2 = makeLuckyGreeting(-100, 1);
+    expect.equal(actual2, expected2, 'input -100 and 1');
+
+    const expected3 = 'Hello! Your lucky number today is 0';
+    const actual3 = makeLuckyGreeting(0, 0);
+    expect.equal(actual3, expected3, 'input 0 and 0');
+});

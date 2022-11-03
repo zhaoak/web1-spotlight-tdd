@@ -9,6 +9,9 @@ import {
     makeLuckyGreeting,
     returnAsAString,
     getSecondItem,
+    getLastItem,
+    renderDogLI,
+    renderDogDiv,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -139,4 +142,18 @@ test('getSecondItem test', (expect) => {
     const expected3 = 8;
     const actual3 = getSecondItem([7, 8, 9]);
     expect.deepEqual(actual3, expected3, '8');
+});
+
+test('getLastItem', (expect) => {
+    const expected = 3;
+    const actual = getLastItem([1, 2, 3]);
+    expect.deepEqual(actual, expected, '3');
+
+    const expected2 = 6;
+    const actual2 = getLastItem([4, 5, 6]);
+    expect.deepEqual(actual2, expected2, '6');
+
+    const expected3 = 9;
+    const actual3 = getLastItem([7, 8, 9]);
+    expect.deepEqual(actual3, expected3, '9');
 });

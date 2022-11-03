@@ -24,7 +24,19 @@ test('add exclamation points test', (expect) => {
 
     const actual = addExclamationPoints('Cheez-It');
 
-    expect.equal(actual, expected, 'Cheez-It!!!');
+    expect.equal(actual, expected, "'Cheez-It' -> 'Cheez-It!!!'");
+
+    const expected2 = 'Triscuit!!!';
+
+    const actual2 = addExclamationPoints('Triscuit');
+
+    expect.equal(actual2, expected2, "'Triscuit' -> 'Triscuit!!!'");
+
+    const expected3 = 'Cheetos!!!';
+
+    const actual3 = addExclamationPoints('Cheetos');
+
+    expect.equal(actual3, expected3, "'Cheetos' -> 'Cheetos!!!'");
 });
 
 test('multiplyBySeven test', (expect) => {

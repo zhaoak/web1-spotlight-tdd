@@ -144,7 +144,7 @@ test('getSecondItem test', (expect) => {
     expect.deepEqual(actual3, expected3, '8');
 });
 
-test('getLastItem', (expect) => {
+test('getLastItem test', (expect) => {
     const expected = 3;
     const actual = getLastItem([1, 2, 3]);
     expect.deepEqual(actual, expected, '3');
@@ -156,4 +156,18 @@ test('getLastItem', (expect) => {
     const expected3 = 9;
     const actual3 = getLastItem([7, 8, 9]);
     expect.deepEqual(actual3, expected3, '9');
+});
+
+test('renderDogLI test', (expect) => {
+    const expected = '<li>Benny</li>';
+    const actual = renderDogLI({ name: 'Benny', age: 6 });
+    expect.equal(actual, expected, 'name Benny');
+
+    const expected2 = '<li>Buster</li>';
+    const actual2 = renderDogLI({ name: 'Buster', age: 4 });
+    expect.equal(actual2, expected2, 'name Buster');
+
+    const expected3 = '<li>Highway</li>';
+    const actual3 = renderDogLI({ name: 'Highway', age: 2 });
+    expect.equal(actual3, expected3, 'name Highway');
 });

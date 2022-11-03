@@ -171,3 +171,17 @@ test('renderDogLI test', (expect) => {
     const actual3 = renderDogLI({ name: 'Highway', age: 2 });
     expect.equal(actual3, expected3, 'name Highway');
 });
+
+test('renderDogDiv test', (expect) => {
+    const expected = '<div><h1>Benny</h1><p>Benny is 6 years old</p></div>';
+    const actual = renderDogDiv({ name: 'Benny', age: 6 });
+    expect.equal(actual, expected, 'name Benny, age 6');
+
+    const expected2 = '<div><h1>Buster</h1><p>Buster is 4 years old</p></div>';
+    const actual2 = renderDogDiv({ name: 'Buster', age: 4 });
+    expect.equal(actual2, expected2, 'name Buster, age 4');
+
+    const expected3 = '<div><h1>Highway</h1><p>Highway is 2 years old</p></div>';
+    const actual3 = renderDogDiv({ name: 'Highway', age: 2 });
+    expect.equal(actual3, expected3, 'name Highway, age 2');
+});

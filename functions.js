@@ -177,6 +177,6 @@ Output:
 
 */
 
-export function renderDogDiv() {
-    return true;
+export function renderDogDiv(dog) {
+    return `<div><h1>${dog.name}</h1><p>${dog.name} is ${dog.age} years old</p></div>`;
 }
